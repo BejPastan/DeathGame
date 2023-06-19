@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1448419004030663236}
   - component: {fileID: 1011832843240971080}
   - component: {fileID: -3707140299273464385}
-  - component: {fileID: 3330685672639068755}
+  - component: {fileID: 8241742812760018574}
   - component: {fileID: -6860575809240311929}
   m_Layer: 0
   m_Name: DestroyableWall
@@ -99,7 +99,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3963883736898232728}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3330685672639068755
+--- !u!114 &8241742812760018574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

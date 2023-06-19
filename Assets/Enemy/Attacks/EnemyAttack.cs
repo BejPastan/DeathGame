@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 public class EnemyAttack : MonoBehaviour
 {
     public float cooldawn;
-    public int attackChance;//ten tajemniczy mysi sprzêt przyda nam siê póŸniej
+    public int attackChance;//ten tajemniczy mysi sprzÃªt przyda nam siÄ™ pÃ³Åºniej
     protected bool alive;
+    [SerializeField]
+    protected Transform player;
 
     public async virtual Task Attack()
     {
-        Debug.Log("coœ zjeba³em z atakami");
+        Debug.Log("coÅ“ zjebaÂ³em z atakami");
     }
 
     public void StartAttack()

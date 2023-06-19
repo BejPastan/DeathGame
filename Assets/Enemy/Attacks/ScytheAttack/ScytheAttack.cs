@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
@@ -7,8 +7,6 @@ public class ScytheAttack : EnemyAttack
 {
     [SerializeField]
     Transform scythe;
-    [SerializeField]
-    Transform player;
     [SerializeField]
     float attackRange;
     [SerializeField]
@@ -20,11 +18,11 @@ public class ScytheAttack : EnemyAttack
         //doskok do celu
         TeleportToTarget();
         //odpalenie animacji ataku
-        animator.SetBool("Attack", true);
+        animator.SetBool("Scythe", true);
         float animTime = GetAnimationDuration("ScytheAttack");
         await Task.Delay((int)(animTime * 1000));
-        //zakoñczenie ataku, odpalenie ruchu
-        animator.SetBool("Attack", false);
+        //zakoÃ±czenie ataku, odpalenie ruchu
+        animator.SetBool("Scythe", false);
     }
 
     private float GetAnimationDuration(string animationName)
@@ -44,25 +42,25 @@ public class ScytheAttack : EnemyAttack
         return duration;
     }
 
-    //KURWAAAAAAAA, ZADZIA£A£O ZA PIERWSZYM RAZEM
-    //TO JAKAŒ MAGIA ALBO JACYŒ BOGOWIE
+    //KURWAAAAAAAA, ZADZIAÅAÅO ZA PIERWSZYM RAZEM
+    //TO JAKAÅš MAGIA ALBO JACYÅš BOGOWIE
     private async void TeleportToTarget()
     {
-        //pobiera kierunek w którym musi siê poruszyæ
+        //pobiera kierunek w ktÃ³rym musi siÄ™ poruszyÄ‡
         Vector3 nextPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
-        //wyznacza ile musi siê przesun¹æ
+        //wyznacza ile musi siÄ™ przesunÄ…Ä‡
         float distance = Mathf.Sqrt(Mathf.Pow(nextPosition.x - transform.position.x, 2) + Mathf.Pow(nextPosition.z - transform.position.z, 2));
-        //odejmuje po³owê zasiêgu ataku
+        //odejmuje poÂ³owÄ™ zasiÄ™gu ataku
         distance -= attackRange / 2;
-        //o ile musi siê dok³adnie przesun¹æ
+        //o ile musi siÄ™ dokÅ‚adnie przesunÄ…Ä‡
         Vector3 transfer = (nextPosition - transform.position).normalized*distance;
-        //wyznacza now¹ pozycjê na któej musi siê znaleŸæ
+        //wyznacza nowÄ… pozycjÄ™ na ktÃ³rej musi siÄ™ znaleÅºÄ‡
         nextPosition = transform.position + transfer;
-        //odpala animacjê teleportacji
+        //odpala animacje teleportacji
         //przesuwa przeciwnika
         transform.position = nextPosition;
         //obraca go o 90 stopni
-        //odpala animacjê pojawiania siê na miejscu
+        //odpala animacjÄ™ pojawiania siÄ™ na miejscu
     }
 
 }

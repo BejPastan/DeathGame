@@ -190,7 +190,7 @@ MonoBehaviour:
   animator: {fileID: 4272587419307728483}
 --- !u!95 &4272587419307728483
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -207,7 +207,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &392903444513878264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,37 +237,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.07437186
+      value: 0.3773873
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.98638034
+      value: 0.6745837
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.13972132
+      value: 0.47232652
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.044727292
+      value: -0.42358404
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 9.161
+      value: 65.409
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 176.082
+      value: 211.105
       objectReference: {fileID: 0}
     - target: {fileID: 4054627726509542674, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 195.811
+      value: 130.267
       objectReference: {fileID: 0}
     - target: {fileID: 7525177100514512857, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
       propertyPath: m_Name
       value: Scythe
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5747122620600228977, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
+    - {fileID: 8634259784440676858, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cf572b7b2d2bf4941a5d9cf72e6f6d45, type: 3}
 --- !u!4 &4411049295722839530 stripped
 Transform:

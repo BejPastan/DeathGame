@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
 
 
     //WALKA
-    //losowanie ktÛrego ataku uøyje
+    //losowanie kt√≥rego ataku u≈ºyje
     private async void SelectAttack()
     {
         attackNumb = Random.Range(0, attackType.Length);
@@ -37,10 +37,10 @@ public class EnemyController : MonoBehaviour
         await Attack();
     }
 
-    //wykonywanie ataku, czekanie cooldownu i potem wywo≥ywanie losowania ataku
+    //wykonywanie ataku, czekanie cooldownu i potem wywo≈Çywanie losowania ataku
     private async Task Attack()
     {
-        if(Application.isPlaying && canAttack)//ten warunek jest øeby zatrzymywa≥o siÍ przy naciúniÍciu stop w edytorze XD nie usuwaj tego debilu
+        if(Application.isPlaying && canAttack)//ten warunek jest ≈ºeby zatrzymywa≈Ço sie przy naci≈õniƒôciu stop w edytorze XD nie usuwaj tego debilu
         {
             movement.StopMovement();
             attackType[attackNumb].StartAttack();

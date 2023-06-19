@@ -1,11 +1,11 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mele : EnemyAttack
+public class Mele : MonoBehaviour
 {
     [SerializeField]
-    bool death;//czy postaæ jest œmierci¹
+    bool death;//czy postaÃ¦ jest Å“mierciÄ…
     [SerializeField]
     int dmg;//jaki dmg zadaje
 
@@ -13,12 +13,12 @@ public class Mele : EnemyAttack
     {
         if (other.transform.tag == "Enemy" && death)
         {
-            Debug.Log("trafi³");
+            Debug.Log("trafiÂ³");
             other.GetComponent<EnemyController>().GetDmg(dmg);
         }
         else if (other.transform.tag == "Player")
         {
-            //chuj wie musze to najpierw napisaæ XD
+            //chuj wie musze to najpierw napisaÄ‡ XD
         }
     }
 }

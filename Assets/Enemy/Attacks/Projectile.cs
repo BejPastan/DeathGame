@@ -49,7 +49,7 @@ public class Projectile : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            collision.gameObject.GetComponent<WallController>().GetDamage(dmg);
+            collision.gameObject.GetComponent<DestroyableWall>().GetDamage(dmg);
         }
         else if(collision.transform.tag == "Bullet")
         {
