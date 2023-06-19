@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Threading.Tasks;
 
 [System.Serializable]
@@ -18,7 +18,7 @@ public class EnemyShooting : EnemyAttack
 
     public async override Task Attack()
     {
-        //wchodzi do pêtli strza³u
+        //wchodzi do pÄ™tli strzaÅ‚u
         for(int x=0; x<series; x++)
         {
             if(alive)
