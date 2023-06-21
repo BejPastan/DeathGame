@@ -20,7 +20,6 @@ public class Stun : Spell
             enemy.StopAttack((int)(duration*1000));
             enemy.PauseMovement((int)(duration * 1000));
         }
-        Debug.Log("wykona³o");
         await Task.Delay((int)(duration * 1000));
     }
 }

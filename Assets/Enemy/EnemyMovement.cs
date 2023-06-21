@@ -8,13 +8,13 @@ public class EnemyMovement : MonoBehaviour
 {
     NavMeshAgent agent;
     [SerializeField]
-    Transform player;
+    public Transform target;
     private bool canMove;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        if(player==null)
+        if(target==null)
         {
             GameObject.Find("Player");
         }
@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if(Application.isPlaying && canMove)
         {
-            agent.destination = player.position;
+            agent.destination = target.position;
             await Task.Delay(500);
             Move();
         }
@@ -41,8 +41,10 @@ public class EnemyMovement : MonoBehaviour
     {
         canMove = false;
         agent.isStopped = true;
-        transform.LookAt(player);
+        transform.LookAt(target);
     }
+
+    
 
 }
 

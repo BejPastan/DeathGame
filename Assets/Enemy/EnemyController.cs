@@ -13,6 +13,9 @@ public class EnemyController : MonoBehaviour
     public EnemyMovement movement;
     public HealthSystem health;
 
+    [SerializeField]
+    Transform player;
+
     private bool canAttack;
 
     int attackNumb;
@@ -81,6 +84,13 @@ public class EnemyController : MonoBehaviour
         movement.StartMovement();
     }
 
+    public async void ChangeTarget(Transform newTarget,float duration)
+    {
+        movement.target = newTarget;
+        Debug.Log(movement.target);
+        await Task.Delay((int)(duration * 1000));
+        movement.target = player;
+    }
 
 
 

@@ -20,10 +20,8 @@ public class Spell : MonoBehaviour
     {
         if(other.tag != "Player" && !activated)
         {
-            Debug.Log("w co ty tam uderzasz, a w to: "+other.name);
             activated = true;
             await ExecuteSpell();
-            Debug.Log("Niszczy");
             Destroy(gameObject);
         }
     }
