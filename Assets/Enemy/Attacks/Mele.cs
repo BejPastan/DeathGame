@@ -13,7 +13,7 @@ public class Mele : MonoBehaviour
     {
         if (other.transform.tag == "Enemy" && death)
         {
-            Debug.Log("trafi³");
+            Debug.Log("trafił");
             other.GetComponent<EnemyController>().GetDmg(dmg);
         }
         else if (other.transform.tag == "Player")
