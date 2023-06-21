@@ -21,7 +21,7 @@ public class ScytheAttack : EnemyAttack
         animator.SetBool("Scythe", true);
         float animTime = GetAnimationDuration("ScytheAttack");
         await Task.Delay((int)(animTime * 1000));
-        //zakoñczenie ataku, odpalenie ruchu
+        //zakończenie ataku, odpalenie ruchu
         animator.SetBool("Scythe", false);
     }
 

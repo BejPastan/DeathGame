@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mele : MonoBehaviour
 {
     [SerializeField]
-    bool death;//czy postaæ jest œmiercią
+    bool death;//czy postać jest śmiercią
     [SerializeField]
     int dmg;//jaki dmg zadaje
 

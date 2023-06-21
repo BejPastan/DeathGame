@@ -17,12 +17,14 @@ public class EnemyController : MonoBehaviour
     Transform player;
 
     private bool canAttack;
+    private bool canMove;
 
     int attackNumb;
 
     private async void Start()
     {
         canAttack = true;
+        canMove = true;
         attackType = GetComponents<EnemyAttack>();
         movement.StartMovement();
         SelectAttack();
@@ -48,12 +50,12 @@ public class EnemyController : MonoBehaviour
             movement.StopMovement();
             attackType[attackNumb].StartAttack();
             await attackType[attackNumb].Attack();
-            if(canAttack)
+            if (canMove)
             {
                 movement.StartMovement();
-                SelectAttack();
             }
         }
+        SelectAttack();
     }
 
     //pauzowanie ataku
@@ -61,7 +63,12 @@ public class EnemyController : MonoBehaviour
     {
         canAttack = false;
         attackType[attackNumb].StopFight();
-        await Task.Delay(stopTime);
+        //await Task.Delay(stopTime);
+    }
+
+    public void StartAttack()
+    {
+        canAttack = true;
     }
 
 
@@ -84,10 +91,9 @@ public class EnemyController : MonoBehaviour
         movement.StartMovement();
     }
 
-    public async void ChangeTarget(Transform newTarget,float duration)
+    public async Task ChangeTarget(Transform newTarget,float duration)
     {
         movement.target = newTarget;
-        Debug.Log(movement.target);
         await Task.Delay((int)(duration * 1000));
         movement.target = player;
     }
@@ -107,6 +113,7 @@ public class EnemyController : MonoBehaviour
     public void Death()
     {
         canAttack = false;
+        canMove = false;
         movement.StopMovement();
         foreach(EnemyAttack attack in attackType)
         {

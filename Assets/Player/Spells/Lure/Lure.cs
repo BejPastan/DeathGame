@@ -8,11 +8,10 @@ public class Lure : Spell
 
     public async override Task ExecuteSpell()
     {
-        Debug.Log("uderzenie");
         EnemyController[] enemies;
 
         GetEnemies(range, out enemies);
-        //zatrzymywanie przeciwników
+        //zmiana celu do œledzenia
         foreach (EnemyController enemy in enemies)
         {
             Debug.Log("kolejny");
@@ -23,5 +22,11 @@ public class Lure : Spell
         gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         await Task.Delay((int)(duration * 1000));
+        foreach (EnemyController enemy in enemies)
+        {
+            Debug.Log("kolejny");
+            enemy.StartAttack();
+        }
+        Destroy(gameObject);
     }
 }
